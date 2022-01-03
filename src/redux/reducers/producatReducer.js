@@ -41,10 +41,10 @@ export const quantityCartReducer = (state = [], { type, payload }) => {
       return [...uniq];
 
     case ActionTypes.REMOVE_FROM_CART: {
-      // const elem = state.find((el) => el.id === payload);
-      // state.splice(state.indexOf(elem), 1);
+      const elem = state.find((el) => el.id === payload);
+      state.splice(state.indexOf(elem), 1);
       // bake_cookie("cart", [...state]);
-      // return [...state];
+      return [...state];
 
       const newState = state.filter((item) => item.id !== payload.id);
       return newState;
