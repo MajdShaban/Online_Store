@@ -67,12 +67,6 @@ const SignUpForm = ({ hiddenSignUp, close }) => {
         ) : null}
       </div>
 
-      {/* <div className={`${styles.control} mx-2`}>
-          <label htmlFor="lname">Last Name</label>
-          <i className="bi bi-person-fill text-primary fs-3"></i>
-          <input id="lname" type="text" placeholder="Last Name" />
-        </div> */}
-
       <div className={styles.control}>
         <label htmlFor="password">Password</label>
         <i className="bi bi-lock-fill text-primary fs-3"></i>
@@ -89,15 +83,6 @@ const SignUpForm = ({ hiddenSignUp, close }) => {
           <div className="text-danger">{formik.errors.password}</div>
         ) : null}
       </div>
-
-      {/* <div className={styles.control}>
-        <label htmlFor="confirmPassword">Confirm Password</label>
-        <input
-          type="confirmPassword"
-          placeholder="Confirm Password"
-          id="confirmPassword"
-        />
-      </div> */}
 
       <div className={styles.control}>
         <label htmlFor="email">Email</label>
@@ -145,68 +130,5 @@ const SignUpForm = ({ hiddenSignUp, close }) => {
     </form>
   );
 };
-
-// function SignUpForm({ hiddenSignUp, close }) {
-//   return (
-//     <form>
-//       <h2 className="text-center fw-bold my-4">Sign Up</h2>
-//       <p className="text-muted">
-//         Create your account. It's free and only takes a minute
-//       </p>
-
-//       <div className={`${styles.control}`}>
-//         <label htmlFor="name">Name</label>
-//         <i className="bi bi-person-fill text-primary fs-3"></i>
-//         <input id="name" type="text" placeholder="Name" />
-//       </div>
-
-//       {/* <div className={`${styles.control} mx-2`}>
-//           <label htmlFor="lname">Last Name</label>
-//           <i className="bi bi-person-fill text-primary fs-3"></i>
-//           <input id="lname" type="text" placeholder="Last Name" />
-//         </div> */}
-
-//       <div className={styles.control}>
-//         <label htmlFor="password">Password</label>
-//         <i className="bi bi-lock-fill text-primary fs-3"></i>
-//         <input type="password" placeholder="Password" id="password" />
-//       </div>
-
-//       {/* <div className={styles.control}>
-//         <label htmlFor="confirmPassword">Confirm Password</label>
-//         <input
-//           type="confirmPassword"
-//           placeholder="Confirm Password"
-//           id="confirmPassword"
-//         />
-//       </div> */}
-
-//       <div className={styles.control}>
-//         <label htmlFor="email">Email</label>
-//         <i className="bi bi-envelope-open-fill text-primary fs-3"></i>
-//         <input type="email" placeholder="Email" id="email" />
-//       </div>
-
-//       <input type="checkbox" id="checkbox" />
-//       <label htmlFor="checkbox" className="mx-2">
-//         I accept <span className="text-success">Term Of Use</span> &{" "}
-//         <span className="text-success">Privacy Policy</span>
-//       </label>
-//       <button
-//         type="button"
-//         className={`btn col-12 ${styles.loginBtn}  `}
-//         onClick={close}
-//       >
-//         Sign Up Now
-//       </button>
-//       <p className="text-center">
-//         Already have an account?{" "}
-//         <span className="btn" onClick={hiddenSignUp}>
-//           Sign In
-//         </span>
-//       </p>
-//     </form>
-//   );
-// }
 
 export default SignUpForm;

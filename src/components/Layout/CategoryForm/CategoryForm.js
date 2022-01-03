@@ -6,7 +6,6 @@ import {
   setSelectedCategory,
   setProducts,
 } from "../../../redux/action/prodactActions";
-import "./CategoryForm.css";
 
 const CategoryForm = () => {
   const [categories, setCategories] = useState([]);

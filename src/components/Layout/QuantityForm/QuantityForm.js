@@ -1,6 +1,5 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-// import { useSelector } from "react-redux";
 import {
   addQtyToProduct,
   setQuantity,
@@ -8,7 +7,6 @@ import {
 
 const QuantityForm = ({ itemQuantity, id, selectStyle }) => {
   const dispatch = useDispatch();
-  // const quantity = useSelector((state) => state.quantity);
 
   const handleChange = ({ target }) => {
     const value = parseInt(target.value);

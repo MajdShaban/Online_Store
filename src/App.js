@@ -14,11 +14,13 @@ function App() {
 
         <Routes>
           <Route path="/" element={<ProductList />} />
+          <Route path="/Online_Store" element={<ProductList />} />
           <Route path="/product/:productId" element={<ProductDetails />} />
           <Route path="/cart" element={<Cart />} />
           <Route>Not Found !</Route>
         </Routes>
       </Router>
+
       <Footer />
     </div>
   );

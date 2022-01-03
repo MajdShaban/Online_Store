@@ -79,7 +79,7 @@ function Cart() {
           <div className="text-center">
             <button
               type="button"
-              className="btn btn-outline-primary col-6"
+              className="btn btn-outline-primary col-6 col-sm-10"
               onClick={() => setShowModal(true)}
             >
               Sign In To Payment

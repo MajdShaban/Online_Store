@@ -1,5 +1,4 @@
 import { ActionTypes } from "../constants/actionType";
-// import { bake_cookie, read_cookie } from "sfcookies";
 
 const initialState = {
   products: [],
@@ -29,10 +28,8 @@ export const selectedProductReducer = (state = {}, { type, payload }) => {
 let uniq = [];
 
 export const quantityCartReducer = (state = [], { type, payload }) => {
-  // state = read_cookie("cart");
   switch (type) {
     case ActionTypes.ADD_TO_CART:
-      // bake_cookie("cart", [...state, payload]);
       state.push(payload);
       uniq = [
         ...state.reduce((map, obj) => map.set(obj.id, obj), new Map()).values(),
@@ -43,11 +40,7 @@ export const quantityCartReducer = (state = [], { type, payload }) => {
     case ActionTypes.REMOVE_FROM_CART: {
       const elem = state.find((el) => el.id === payload);
       state.splice(state.indexOf(elem), 1);
-      // bake_cookie("cart", [...state]);
       return [...state];
-
-      const newState = state.filter((item) => item.id !== payload.id);
-      return newState;
     }
 
     case ActionTypes.ADDQTYTOCART:
@@ -61,7 +54,6 @@ export const quantityCartReducer = (state = [], { type, payload }) => {
       return newState;
 
     case ActionTypes.CLEAR_CART:
-      // bake_cookie("cart", []);
       return [];
 
     default:

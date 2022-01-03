@@ -45,8 +45,6 @@
 }
 
 .showOverlay {
-  /* visibility: visible; */
-  /* opacity: 1; */
   animation: hiddenIn 1s;
   animation-fill-mode: forwards;
 }

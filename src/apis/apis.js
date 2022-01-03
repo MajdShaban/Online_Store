@@ -4,7 +4,6 @@ export const fetchProducts = async (dispatch, setProducts) => {
   const response = await axios
     .get("https://fakestoreapi.com/products")
     .catch((err) => console.log("ERR", err));
-  // console.log("response", response.data);
   dispatch(setProducts(response.data));
 };
 

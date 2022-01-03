@@ -1,23 +1,23 @@
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import ProductCopmponent from "./ProductComponent";
 
-// import { setProducts } from "../../../redux/action/prodactActions";
-// import { fetchProducts } from "../../../apis/apis";
+import { setProducts } from "../../../redux/action/prodactActions";
+import { fetchProducts } from "../../../apis/apis";
 import CategoryForm from "../../Layout/CategoryForm/CategoryForm";
 
 import "./ProductList.css";
 
 const ProductList = () => {
+  const dispatch = useDispatch();
   const products = useSelector((state) => state.allProducts.products);
   const selectedCategory = useSelector(
     (state) => state.selectedCategory.selected
   );
 
-  // useEffect(() => {
-  //   console.log("ProductList ferchProducts");
-  //   fetchProducts(dispatch, setProducts);
-  // }, [dispatch]);
+  useEffect(() => {
+    fetchProducts(dispatch, setProducts);
+  }, [dispatch]);
 
   return (
     <div className="container">
