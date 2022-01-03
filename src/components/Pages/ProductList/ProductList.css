@@ -1,0 +1,20 @@
+.allProducts {
+  margin: 15px 0 40px 0;
+}
+
+.homeHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.homeHeader > p {
+  font-size: 30px;
+  border-bottom: 4px solid var(--firstColor);
+}
+
+@media (max-width: 576px) {
+  .homeHeader > p {
+    font-size: 23px;
+  }
+}

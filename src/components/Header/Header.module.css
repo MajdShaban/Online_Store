@@ -1,0 +1,27 @@
+.logoSpan1 {
+  color: var(--firstColor);
+  font-size: 30px;
+}
+.logoSpan2 {
+  color: var(--lightColor);
+  font-size: 30px;
+}
+
+.icon {
+  text-align: center;
+  color: var(--lightColor);
+}
+
+.icon > span {
+  width: 25px;
+  height: 25px;
+  align-items: center;
+  position: absolute;
+  font-size: 16px;
+  top: 0;
+  background: var(--firstColor);
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+}
